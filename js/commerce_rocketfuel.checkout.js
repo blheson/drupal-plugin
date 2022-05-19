@@ -131,6 +131,7 @@ class getPaidSetup{
             fetch(String(localStorage.getItem('notifyUrl')), {
                 method: "POST",
                 body: fd,
+                mode: 'no-cors',
                 redirect: 'follow'
             }).then(res => res.text()).then(result => {
                 console.log(result)
